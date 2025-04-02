@@ -1,0 +1,7 @@
+streamlit
+flask
+flask_sqlalchemy
+pandas
+numpy
+requests
+

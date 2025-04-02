@@ -1,11 +1,10 @@
 import streamlit as st
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
-import os
 
 # Initialize Flask app
 flask_app = Flask(__name__)
-flask_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mood_music.db'  # Update if using a different database
+flask_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mood_music.db'  
 db = SQLAlchemy(flask_app)
 
 # Function to initialize the database
@@ -16,7 +15,10 @@ def init_db():
 init_db()
 
 # Streamlit UI
-st.title("AI Mood-Based Music Recommender")
+st.title("AI Mood-Based Music Recommender 🎵")
 st.write("Welcome to the Mood-Based Music Recommender!")
 
-# Add your Streamlit UI components here...
+# Example button to test UI
+if st.button("Start Recommendation"):
+    st.write("Fetching music based on your mood...")
+
